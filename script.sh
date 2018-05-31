@@ -315,8 +315,9 @@ fi
 pwd
  if [[ $choixvm == 1 ]]; then
     vagrant ssh
-  elif [[ $choixvm == 1 ]]; then
+    read -p "installer apache: " test
+    sudo apt-get install apache2 -y
+  elif [[ $choixvm == 2 ]]; then
     vagrant global-status
     read -p "le nom de la vm pour se connecter" vmname
-    pwd
 fi
